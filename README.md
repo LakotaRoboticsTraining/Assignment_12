@@ -120,27 +120,26 @@ Find one subsystem class and one command class. Write the package of each.
 
 Run simulation, add one `System.out.println` in `robotInit`, and find that line in the console.
 
-### Check your understanding
+## Check your understanding
 
-1. What library provides TimedRobot?
+1. <details>
+     <summary>What library provides `TimedRobot`?</summary>
+     WPILib.
+   </details>
+2. <details>
+     <summary>Who calls `teleopPeriodic()` - you, or WPILib?</summary>
+     WPILib (the framework), many times per second during teleop.
+   </details>
+3. <details>
+     <summary>Where should most robot behavior live: `Main` or subsystems/commands?</summary>
+     Subsystems and commands (and sometimes `Robot` setup).
+   </details>
+4. <details>
+     <summary>What does `robotInit` vs `teleopPeriodic` mean?</summary>
+     `robotInit` = once at startup; `teleopPeriodic` = repeatedly while drivers have control.
+   </details>
 
-2. Who calls teleopPeriodic() - you, or WPILib?
-
-3. Where should most robot behavior live: Main or subsystems/commands?
-
-4. What does robotInit vs teleopPeriodic mean?
-
-Answers
-
-1. WPILib.
-
-2. WPILib (the framework), many times per second during teleop.
-
-3. Subsystems and commands (and sometimes Robot setup).
-
-4. robotInit = once at startup; teleopPeriodic = repeatedly while drivers have control.
-
-### Looking ahead
+## Looking ahead
 
 In Lesson 13, you will connect subsystems (hardware) and commands (actions) and sketch your first robot behavior the way this team’s code is structured.
 
