@@ -2,7 +2,7 @@
 
 Goal: Recognize the pieces of an FRC Java project and how the robot program starts and runs.
 
-Time: About 40–50 minutes (plus opening the project with a mentor)
+Time: About 40-50 minutes (plus opening the project with a mentor)
 
 You will learn:
 
@@ -11,11 +11,11 @@ You will learn:
 - TimedRobot and the robot life-cycle methods (robotInit, teleopPeriodic, …)
 - Where to look in the team project (frc.robot)
 - Simulation vs a real roboRIO (high level)
-Before this lesson: Lessons 1–11 (especially classes, inheritance, packages, methods).
+Before this lesson: Lessons 1-11 (especially classes, inheritance, packages, methods).
 
 ### Why this matters
 
-Everything you practiced — main, classes, methods, if, loops, packages — is still here. WPILib adds robot-specific types and a loop that runs many times per second while the match is on.
+Everything you practiced - main, classes, methods, if, loops, packages - is still here. WPILib adds robot-specific types and a loop that runs many times per second while the match is on.
 
 ### What is WPILib?
 
@@ -48,7 +48,7 @@ public static void main(String... args) {
 You almost never put match logic in Main. Logic lives in Robot and in subsystems/commands.
 
 ```java
-Read that as: “Build a Robot object and let WPILib run it.” (Robot::new is a way to say “use the Robot constructor” — you do not need the :: syntax yourself yet.)
+Read that as: “Build a Robot object and let WPILib run it.” (Robot::new is a way to say “use the Robot constructor” - you do not need the :: syntax yourself yet.)
 ```
 
 ### Robot extends TimedRobot
@@ -64,11 +64,11 @@ public class Robot extends TimedRobot {
 
 
 
-This is inheritance + override (Lessons 9–10). WPILib calls these methods at the right time.
+This is inheritance + override (Lessons 9-10). WPILib calls these methods at the right time.
 
 while (true) for the match loop.
 
-On this team’s project, robotPeriodic() runs CommandScheduler.getInstance().run(); — that is what makes commands execute. You will use that in Lesson 13.
+On this team’s project, robotPeriodic() runs CommandScheduler.getInstance().run(); - that is what makes commands execute. You will use that in Lesson 13.
 
 ### Tour the team project
 
@@ -92,11 +92,11 @@ System.out.println still works (Driver Station console / rioLog). Later you will
 
 ### Common first-day confusion
 
-1. Looking for a big while loop in main — the loop is inside WPILib (periodic)
+1. Looking for a big while loop in main - the loop is inside WPILib (periodic)
 
-2. Editing Main for robot behavior — edit Robot, subsystems, or commands instead
+2. Editing Main for robot behavior - edit Robot, subsystems, or commands instead
 
-3. Mixing teleop and auton code in one pile — use the matching *Init / *Periodic (or commands)
+3. Mixing teleop and auton code in one pile - use the matching *Init / *Periodic (or commands)
 
 4. Changing constants in three places that prefer constants classes
 
@@ -104,19 +104,19 @@ System.out.println still works (Driver Station console / rioLog). Later you will
 
 Open a WPILib project with your mentor. Written answers are enough unless told otherwise.
 
-### Challenge 1 â€” Main in WPILib
+### Challenge 1 - Main in WPILib
 
 In your own words: what does `Main.main` do in a WPILib project vs these training assignments?
 
-### Challenge 2 â€” Robot lifecycle methods
+### Challenge 2 - Robot lifecycle methods
 
 Open `Robot.java`. List three `@Override` methods you see and when each runs.
 
-### Challenge 3 â€” Find examples
+### Challenge 3 - Find examples
 
 Find one subsystem class and one command class. Write the package of each.
 
-### Challenge 4 â€” Optional (with mentor)
+### Challenge 4 - Optional (with mentor)
 
 Run simulation, add one `System.out.println` in `robotInit`, and find that line in the console.
 
@@ -124,7 +124,7 @@ Run simulation, add one `System.out.println` in `robotInit`, and find that line 
 
 1. What library provides TimedRobot?
 
-2. Who calls teleopPeriodic() — you, or WPILib?
+2. Who calls teleopPeriodic() - you, or WPILib?
 
 3. Where should most robot behavior live: Main or subsystems/commands?
 
