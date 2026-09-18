@@ -48,7 +48,7 @@ public static void main(String... args) {
 You almost never put match logic in Main. Logic lives in Robot and in subsystems/commands.
 
 ```java
-Read that as: “Build a Robot object and let WPILib run it.” (Robot::new is a way to say “use the Robot constructor” - you do not need the :: syntax yourself yet.)
+Read that as: "Build a Robot object and let WPILib run it." (Robot::new is a way to say "use the Robot constructor" - you do not need the :: syntax yourself yet.)
 ```
 
 ### Robot extends TimedRobot
@@ -68,7 +68,7 @@ This is inheritance + override (Lessons 9-10). WPILib calls these methods at the
 
 while (true) for the match loop.
 
-On this team’s project, robotPeriodic() runs CommandScheduler.getInstance().run(); - that is what makes commands execute. You will use that in Lesson 13.
+On this team's project, robotPeriodic() runs CommandScheduler.getInstance().run(); - that is what makes commands execute. You will use that in Lesson 13.
 
 ### Tour the team project
 
@@ -141,6 +141,6 @@ Run simulation, add one `System.out.println` in `robotInit`, and find that line 
 
 ## Looking ahead
 
-In Lesson 13, you will connect subsystems (hardware) and commands (actions) and sketch your first robot behavior the way this team’s code is structured.
+In Lesson 13, you will connect subsystems (hardware) and commands (actions) and sketch your first robot behavior the way this team's code is structured.
 
 Lesson complete. When you can find Main, Robot, a subsystem, and a command in the project, you are ready for Lesson 13.
